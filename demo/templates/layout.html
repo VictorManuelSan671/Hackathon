@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello from Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--<style>body{background: #000; color:aqua}</style> -->
+</head>
+<body>
+        <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index') }}">Index</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('hello') }}">Hello</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/hello/name">Hello name</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">login</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="/profile/mio">profile</a>
+                </li>
+        </ul>
+
+        {% block content %}
+        {% endblock %}        
+
+</body>
+</html>
